@@ -1,0 +1,237 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    padding: 0 20px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li a:hover {
+    color: orangered;
+}
+
+.title {
+    color: orangered;
+    padding: 0 20px;
+}
+
+/* HERO */
+#hero {
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.heroimg {
+    width: 700px;
+    height: 400px;
+    border-radius: 50%;
+}
+
+.para1 {
+    text-align: center;
+}
+
+.p1 {
+    padding: 20px 60px;
+    line-height: 1.7;
+}
+
+/* HEADINGS */
+h1 {
+    color: orangered;
+    text-align: center;
+}
+
+/* MENU GRID */
+.menu1, .menu2, .menu3, .menu4, .menu5 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+/* CARD */
+.starters, .biryani, .curry, .desert, .drinks {
+    background: #111;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+
+    width: 100%;        /* ADD THIS */
+    max-width: 250px;   /* ADD THIS */
+    margin: auto;       /* ADD THIS */
+}
+
+.starters:hover,
+.biryani:hover,
+.curry:hover,
+.desert:hover,
+.drinks:hover {
+    background-color: rgb(20,20,20);
+    transform: scale(1.05);
+}
+
+/* IMAGE */
+img {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* NAME + PRICE */
+.name {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.about {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* REVIEWS */
+.reviews {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap:wrap;
+}
+
+.r {
+    background:#111;
+    padding:15px;
+    border-radius:10px;
+    width: 200px;
+}
+
+.r:hover {
+    box-shadow: 0px 1px 5px gray;
+    transform: scale(1.05);
+    border-radius: 10px;
+}
+
+/* CONTACT */
+#contact{
+    text-align:center;
+}
+.contact-info {
+    text-align: center;
+}
+#choose{
+    text-align:center;
+    padding:50px 20px;
+}
+
+/* ADD BUTTON */
+.add-btn {
+    background: orangered;
+    color: white;
+    border: none;
+
+    padding: 12px 30px;   /* bigger */
+    border-radius: 25px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    margin-top: 12px;
+
+    display: inline-block;
+}
+#cartBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    background: orangered;
+    color: white;
+
+    padding: 16px 26px;   /* BIG SIZE */
+    border-radius: 40px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    cursor: pointer;
+    z-index: 1000;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+/* cart count bubble */
+#cartCount {
+    background: white;
+    color: orangered;
+
+    padding: 6px 12px;
+    border-radius: 50%;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+button{
+    background-color: orangered;
+    color:white;
+}
+@media (max-width: 768px) {
+
+    #hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu1, .menu2, .menu3, .menu4, .menu5 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about {
+        padding: 20px;
+    }
+
+    ul {
+        justify-content: center;
+    }
+
+    #cartBtn {
+        padding: 10px 18px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bill</title>
+<link rel="stylesheet" href="bill.css">
+</head>
+
+<body>
+
+<h1>🧾 Order Summary</h1>
+
+<div id="billItems"></div>
+
+<h2 id="totalBill"></h2>
+
+<h3>Select Payment Method</h3>
+
+<div class="payment">
+    <label><input type="radio" name="pay" value="upi"> UPI</label>
+    <label><input type="radio" name="pay" value="card"> Card</label>
+    <label><input type="radio" name="pay" value="cod"> Cash</label>
+</div>
+
+<button onclick="payNow()">Pay Now</button>
+
+<script src="bill.js"></script>
+
+</body>
+</html>

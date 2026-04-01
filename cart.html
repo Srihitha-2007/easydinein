@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cart</title>
+</head>
+
+<body>
+
+<h2>🛒 Your Cart</h2>
+
+<ul id="cart-list"></ul>
+
+<h3 id="total"></h3>
+
+<button onclick="goToBill()">Proceed to Bill</button>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let total = 0;
+let list = document.getElementById("cart-list");
+
+cart.forEach(item => {
+    let qty = item.qty || 1;
+    let itemTotal = item.price * qty;
+
+    total += itemTotal;
+
+    billDiv.innerHTML += `
+        <div>
+            <span>${item.name} x ${qty}</span>
+            <span>₹${itemTotal}</span>
+        </div>
+    `;
+});
+document.getElementById("total").innerText = "Total: ₹" + total;
+
+function goToBill() {
+    window.location.href = "bill.html";
+}
+</script>
+
+</body>
+</html>
