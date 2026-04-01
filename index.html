@@ -6,7 +6,11 @@
 <link rel="stylesheet" href="style.css">
 <title>EasyDine</title>
 <script>
-    window.location.href="loginpage.html";
+  let isLoggedIn = localStorage.getItem("loggedIn");
+
+  if(isLoggedIn !== "true") {
+    window.location.href = "loginpage.html";
+  }
 </script>
 </head>
 
